@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
 
-        //use page 1
+        //use from page 1
         val client = ApiClient.apiService.fetchCharacters("1")
 
         client.enqueue(object : retrofit2.Callback<CharacterResponse> {
