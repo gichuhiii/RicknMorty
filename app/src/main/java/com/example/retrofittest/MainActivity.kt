@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            //if failed
             override fun onFailure(call: Call<CharacterResponse>, t: Throwable) {
                 Log.e("Failed","" +t.message)
             }
