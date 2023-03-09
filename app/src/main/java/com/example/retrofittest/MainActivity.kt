@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     Log.d("characters", "" + response.body())
 
+                    //get results from response body
                     val results = response.body()?.results
                     results?.forEach {
                        val adapter = MainAdapter(results)
