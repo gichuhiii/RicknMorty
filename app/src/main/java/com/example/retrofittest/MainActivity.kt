@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                 call: Call<CharacterResponse>,
                 response: Response<CharacterResponse>
             ) {
-                //check if successful
+                //check if response is successful and display response body
                 if (response.isSuccessful) {
                     Log.d("characters", "" + response.body())
 
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            //if failed
+            //if it was not successful
             override fun onFailure(call: Call<CharacterResponse>, t: Throwable) {
                 Log.e("Failed","" +t.message)
             }

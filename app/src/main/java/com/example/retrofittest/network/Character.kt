@@ -14,6 +14,7 @@ data class Character(
 //gives us results
 data class CharacterResponse(
 
+    //list of character data
     @Json(name = "results")
     val results: List<Character>
 
