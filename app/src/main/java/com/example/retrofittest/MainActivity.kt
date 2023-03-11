@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         supportActionBar?.hide()
 
         //use from page 1
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
                     val results = response.body()?.results
                     results?.forEach {
                        val adapter = MainAdapter(results)
+
                         val recyclerView = findViewById<RecyclerView>(R.id.charactersRv)
                         recyclerView.layoutManager = StaggeredGridLayoutManager( 2, StaggeredGridLayoutManager.VERTICAL)
                         recyclerView.adapter = adapter

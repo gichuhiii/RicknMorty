@@ -40,6 +40,7 @@ interface ApiService {
 
     //get characters and fetch characters with query and call to get the character response
     @GET("character")
+
     fun fetchCharacters(@Query("page") page: String): Call<CharacterResponse>
 
 }
