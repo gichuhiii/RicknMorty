@@ -40,8 +40,10 @@ class RicknMorty : Fragment () {
     }
 
     private fun setUpUI() {
+
         binding.charactersRv.apply {
             setHasFixedSize(true)
+
 //            use from page 1
             val client = ApiClient.apiService.fetchCharacters("1")
 
@@ -66,7 +68,6 @@ class RicknMorty : Fragment () {
                         }
                     }
                 }
-
                 //if it was not successful
                 override fun onFailure(call: Call<CharacterResponse>, t: Throwable) {
                     Log.e("Failed", "" + t.message)
