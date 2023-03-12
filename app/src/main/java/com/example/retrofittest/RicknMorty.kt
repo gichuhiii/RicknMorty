@@ -45,7 +45,6 @@ class RicknMorty : Fragment () {
 
 //            use from page 1
             val client = ApiClient.apiService.fetchCharacters("1")
-
             client.enqueue(object : retrofit2.Callback<CharacterResponse> {
                 override fun onResponse(
                     call: Call<CharacterResponse>,
